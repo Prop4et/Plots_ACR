@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+    <script type= "text/javascript">
+        var plots=["Sei timid*?",
+            "Sei generos*?",
+            "Di che colore hai gli occhi?",
+            "Hai fratelli o sorelle?",
+            "Domani andrai a messa?",
+            "Aaiuti volentieri i tuoi genitori?",
+            "Sei altruista?",
+            "Sei felice? (batti le mani)",
+            "Qual è il tuo piatto preferito?*",
+            "Qual è il tuo abito preferito?*",
+            "Ti piace l'acr?",
+            "Caff&eacute o coca-cola?",
+            "Ti piace studiare?",
+            "Un tuo pregio:*",
+            "Un tuo difetto:*",
+            "Estat&eacute pesca o limone?",
+            "Hai paura del buio?",
+            "Sei un* tiktoker?",
+            "Ti piace giocare a fortnite?",
+            "Che musica ascolti?*",
+            "Quale verso di animale ti piace fare? Fallo!*",
+            "Estate o Inverno? (Perchè?)",
+            "Che numero hai di scarpe?*",
+            "Hai animali domestici?",
+            "Pratichi sport?",
+            "Ti lavi i denti?"];
+        //map(index, [x, y]), dove [x, y] x= no e y = sì
+        var dataLabels = new Map();
+        var dataVal = new Map();
+        var backgroundColors = new Map();
+        var charts = new Map();
+            
+       
+    </script>
+    <script src = https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js> </script>
+    <script src="utility.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title> Questionario </title>
+
+</head>
+<body onload="init()">
+        <div class = "creation whole-page">
+            <h1>Creazione Grafici</h1>
+            <div class = "wrap" id = "wrap">
+                
+                <div class ="select">
+                    
+                    <select name="plots" id="plots" onchange="changeOpt()"></select>
+                </div>
+                <div class = "block" id = "yes" onclick="passValue(1)">   
+                    <div class="legenda green"></div>
+                    <div class = "name" id="yesName"> Sì </div>
+                </div>
+                <div class = "block" id = "no" onclick="passValue(0)">
+                    <div class="legenda red"></div>
+                    <div class= "name" id="noName"> No</div>                
+                </div>
+                <div class = "block" id = "maybe" onclick="passValue(2)">
+                    <div class="legenda blue"></div>
+                    <div class= "name" id="maybeName"> Azzurri </div>                
+                </div>
+                <div class = "delete">
+                    <button onclick = "del()"> Elimina </button>
+                </div> 
+                <div class = "openAnswer" id = "openAnswer" >
+                    <label for="openLabel">Risposta:</label>
+                    <input type="text" id="openLabel" name="openLabel">
+                    <button onclick = "send()"> Invia </button>
+                </div> 
+            </div>
+            
+        </div>
+            
+        <div class ="show-plots whole-page" id ="big-container">
+            
+        </div>
+</body>
+
+
+
+

@@ -1,0 +1,74 @@
+html,body{
+    height:100%;
+    margin: 0;
+    background-color: burlywood;
+}
+.block{
+    position: relative;
+    float: right;  
+    height: 50px;
+}
+.select{
+    position: relative;
+}
+.legenda {    
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+.wrap{
+    position: relative;
+    width: 60%;
+    box-sizing: border-box;
+}
+.green {
+    background: #00ff00;
+}
+
+.red {
+    background: #ae163e;
+}
+
+.blue {
+    background: #0b15a3;
+}
+
+.name{
+    display: inline;
+}
+.whole-page{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.creation{
+    position: fixed;
+    left: 0;
+    width: 25%;
+    background-color: #197fc4a1;
+}
+.show-plots{
+    right: 0;
+    width: 75%;  
+    height: 100%;
+    display: inline-block;
+    min-height: 100%;
+    
+}
+#plots{
+    width: 100%;
+}
+.delete{
+    position: relative;
+    float: left;
+    margin-top: 10px;  
+}
+#openAnswer{
+    position: relative;
+    float: left;
+    margin-top: 10px;
+}
